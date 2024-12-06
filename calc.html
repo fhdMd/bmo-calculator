@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMO The Calculator</title>
+    <link rel="stylesheet" href="calc.css" />
+  </head>
+  <body>
+    <div class="bmo-body">
+      <table>
+        <tr>
+          <td colspan="4" class="bmo-face">
+            <input readonly id="display" />
+          </td>
+        </tr>
+        <tbody class="keypad">
+          <tr>
+            <td><button class="clear" onclick="clearAll()">AC</button></td>
+            <td>
+              <button class="pow" onclick="mode()">PW</button>
+            </td>
+            <td><button class="delete" onclick="deleteLast()">DL</button></td>
+            <td>
+              <button class="op" onclick="appendToDisplay('/')">/</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="num" onclick="appendToDisplay('7')">7</button>
+            </td>
+            <td>
+              <button class="num" onclick="appendToDisplay('8')">8</button>
+            </td>
+            <td>
+              <button class="num" onclick="appendToDisplay('9')">9</button>
+            </td>
+            <td>
+              <button class="op" onclick="appendToDisplay('*')">*</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="num" onclick="appendToDisplay('4')">4</button>
+            </td>
+            <td>
+              <button class="num" onclick="appendToDisplay('5')">5</button>
+            </td>
+            <td>
+              <button class="num" onclick="appendToDisplay('6')">6</button>
+            </td>
+            <td>
+              <button class="op" onclick="appendToDisplay('-')">-</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="num" onclick="appendToDisplay('1')">1</button>
+            </td>
+            <td>
+              <button class="num" onclick="appendToDisplay('2')">2</button>
+            </td>
+            <td>
+              <button class="num" onclick="appendToDisplay('3')">3</button>
+            </td>
+            <td>
+              <button class="op" onclick="appendToDisplay('+')">+</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="num" onclick="appendToDisplay('%')">%</button>
+            </td>
+            <td>
+              <button class="num" onclick="appendToDisplay('0')">0</button>
+            </td>
+            <td>
+              <button class="num" onclick="appendToDisplay('.')">.</button>
+            </td>
+            <td>
+              <button class="op" onclick="solve()">=</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="calc.js"></script>
+  </body>
+</html>
